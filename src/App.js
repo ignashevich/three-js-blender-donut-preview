@@ -3,6 +3,7 @@ import './App.css';
 import {Canvas} from '@react-three/fiber'
 import Model from "./Model";
 
+
 function App() {
   return (
       <Canvas>
@@ -11,7 +12,6 @@ function App() {
           </Suspense>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
-
       </Canvas>
   );
 }
