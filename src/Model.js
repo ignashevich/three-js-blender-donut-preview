@@ -17,8 +17,6 @@ export default function Model({...props}) {
     const xRot = (((coords.x * 100 / window.innerWidth) * (2*Math.PI))/100) - Math.PI;
     const {nodes, materials} = useGLTF('/donut6.glb')
 
-    console.log(yRot, xRot);
-
     return (
         <group rotation={[yRot, xRot, 0]} ref={group} {...props} dispose={null}>
             <mesh scale={50} geometry={nodes.Donut.geometry} material={materials['Material.001']} position={[0, 0.02, 0]}/>
